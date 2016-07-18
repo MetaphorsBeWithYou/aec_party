@@ -29,7 +29,8 @@ periods = [
 {"year":"2010-2011","id":"48"},
 {"year":"2011-2012","id":"49"},
 {"year":"2012-2013","id":"51"},
-{"year":"2013-2014","id":"55"}
+{"year":"2013-2014","id":"55"},
+{"year":"2014-2015","id":"56"}
 ]
 
 partyGroups = [{"entityID":4,"group":"alp"},
@@ -158,7 +159,7 @@ for x in xrange(upto, len(periods)):
                     clientID = lxml.html.tostring(tds[0]).split('ClientID=')[1].split('">')[0]
                     #print clientID
                     donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
-                    #print donName
+                    print donName
                     address = tds[1].text
                     #print address
                     state = tds[2].text
@@ -213,15 +214,15 @@ for x in xrange(upto, len(periods)):
 
 
                 except Exception, e:
-                    print e
+                    #print e
                     #print traceback.print_exc()
-                    print "Nothing here"
+                    #print "Nothing here"
             #get other pages if present
             
             if noPages > 1:
                 print "multiple pages, doing more now"
                 for page in xrange(1,noPages):
-                    print page
+                    #print page
                     br.select_form(nr=0)
                     br.set_all_readonly(False)
                     br.find_control("ctl00$buttonGo").disabled = True
@@ -247,7 +248,7 @@ for x in xrange(upto, len(periods)):
                         clientID = lxml.html.tostring(tds[0]).split('ClientId=')[1].split('">')[0]
                         #print clientID
                         donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
-                        #print donName
+                        print donName
                         address = tds[1].text
                         #print address
                         state = tds[2].text
@@ -302,8 +303,8 @@ for x in xrange(upto, len(periods)):
                         scraperwiki.sqlite.save(unique_keys=["rowCount","page","period","entityID"], data=data)
 
         except Exception, e:
-            print e
-            print traceback.print_exc()
+            #print e
+            #print traceback.print_exc()
             print "No donations"                
 
     scraperwiki.sqlite.save_var('upto', x)        
