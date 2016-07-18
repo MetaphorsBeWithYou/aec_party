@@ -216,7 +216,7 @@ for x in xrange(upto, len(periods)):
                 except Exception, e:
                     #print e
                     #print traceback.print_exc()
-                    #print "Nothing here"
+                    print "Nothing here"
             #get other pages if present
             
             if noPages > 1:
