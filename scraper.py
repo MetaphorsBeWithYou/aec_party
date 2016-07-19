@@ -78,7 +78,7 @@ for x in xrange(upto, len(periods)):
     items = br.form.controls[10].get_items()
 
     for item in items:
-        print item.name
+        #print item.name
         print "Entity:", item.attrs['label']
         #item.name
         response = br.open(annDonorsurl)
@@ -94,7 +94,7 @@ for x in xrange(upto, len(periods)):
             response = br.submit("ctl00$ContentPlaceHolderBody$pagingControl$buttonGo")
             html = response.read()
             
-            #print html
+            print html
 
 
             root = lxml.html.fromstring(html)
