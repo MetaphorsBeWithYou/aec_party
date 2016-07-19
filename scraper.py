@@ -78,7 +78,7 @@ for x in xrange(upto, len(periods)):
     items = br.form.controls[10].get_items()
 
     for item in items:
-        #print item.name
+        print item.name
         print "Entity:", item.attrs['label']
         #item.name
         response = br.open(annDonorsurl)
@@ -115,7 +115,7 @@ for x in xrange(upto, len(periods)):
                     clientID = lxml.html.tostring(tds[0]).split('ClientID=')[1].split('">')[0]
                     #print clientID
                     donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
-                    print donName
+                    #print donName
                     address = tds[1].text
                     #print address
                     state = tds[2].text
