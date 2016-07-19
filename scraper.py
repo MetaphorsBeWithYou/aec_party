@@ -29,7 +29,7 @@ periods = [
 #{"year":"2010-2011","id":"48"},
 #{"year":"2011-2012","id":"49"},
 #{"year":"2012-2013","id":"51"},
-{"year":"2013-2014","id":"55"},
+#{"year":"2013-2014","id":"55"},
 {"year":"2014-2015","id":"56"}
 ]
 
@@ -79,7 +79,7 @@ for x in xrange(upto, len(periods)):
 
     for item in items:
         #print item.name
-        # print "Entity:", item.attrs['label']
+        print "Entity:", item.attrs['label']
         #item.name
         response = br.open(annDonorsurl)
         br.select_form(nr=0)
