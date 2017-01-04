@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-#Scraper for donations declared by parties with canonical donor names from the AEC
-
+#Prep for Feb 1 2017
 
 import csv
 import mechanize 
@@ -31,6 +29,7 @@ periods = [
 #{"year":"2012-2013","id":"51"},
 #{"year":"2013-2014","id":"55"},
 {"year":"2014-2015","id":"56"}
+#{"year":"2015-2016","id":"xx"}
 ]
 
 #Check if scraper has been run before, see where it got up to
@@ -115,7 +114,7 @@ for x in xrange(upto, len(periods)):
                     clientID = lxml.html.tostring(tds[0]).split('ClientID=')[1].split('">')[0]
                     #print clientID
                     donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
-                    #print donName
+                    print donName
                     address = tds[1].text
                     #print address
                     state = tds[2].text
