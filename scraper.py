@@ -242,7 +242,7 @@ for x in xrange(upto, len(periods)):
                         data['donUrl'] = donUrl
                         data['rowCount'] = i
                         data['page'] = page+1
-                        data['entityID'] = item.name
+                        #data['entityID'] = item.name
                         data['period'] = periods[x]['year']
                         data['entityName'] = item.attrs['label']
                         #data['cleanName'] = cleanName
@@ -251,7 +251,7 @@ for x in xrange(upto, len(periods)):
 
                         
                         
-                        scraperwiki.sqlite.save(unique_keys=["rowCount","page","period","entityID"], data=data)
+                        scraperwiki.sqlite.save(unique_keys=["rowCount","page","period"], data=data)
 
         except Exception, e:
             #print e
