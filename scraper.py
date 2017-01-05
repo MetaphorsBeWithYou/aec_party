@@ -111,7 +111,7 @@ for x in xrange(upto, len(periods)):
                     #print donType
                     submissionID = lxml.html.tostring(tds[0]).split('SubmissionId=')[1].split('&amp;ClientId=')[0]
                     #print submissionID
-                    clientID = lxml.html.tostring(tds[0]).split('ClientID=')[1].split('">')[0]
+                    #clientID = lxml.html.tostring(tds[0]).split('ClientID=')[1].split('">')[0]
                     #print clientID
                     donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
                     print donName
