@@ -129,15 +129,15 @@ for x in xrange(upto, len(periods)):
                     #print donUrl 
 
 
-                    fixedUrl = 'http://periodicdisclosures.aec.gov.au/' + donUrl.replace("amp;","")
-                    html = requests.get(fixedUrl).content
-                    dom = lxml.html.fromstring(html)
-                    h2s = dom.cssselect(".rightColfadWideHold h2")
-                    if donType == "Donor" or donType == "AssociatedEntity":
-                        cleanName = h2s[0].text.strip()
+                    #fixedUrl = 'http://periodicdisclosures.aec.gov.au/' + donUrl.replace("amp;","")
+                    #html = requests.get(fixedUrl).content
+                    #dom = lxml.html.fromstring(html)
+                    #h2s = dom.cssselect(".rightColfadWideHold h2")
+                    #if donType == "Donor" or donType == "AssociatedEntity":
+                        #cleanName = h2s[0].text.strip()
                         #print cleanName.strip()
-                    if donType == "Party":
-                        cleanName = h2s[1].text.strip()
+                    #if donType == "Party":
+                        #cleanName = h2s[1].text.strip()
                         #print cleanName.strip()
 
                     data = {}
@@ -156,7 +156,7 @@ for x in xrange(upto, len(periods)):
                     data['entityID'] = item.name
                     data['period'] = periods[x]['year']
                     data['entityName'] = item.attrs['label']
-                    data['cleanName'] = cleanName
+                    #data['cleanName'] = cleanName
 
                     # print data
                     
@@ -216,15 +216,15 @@ for x in xrange(upto, len(periods)):
                         #print donUrl 
 
 
-                        fixedUrl = 'http://periodicdisclosures.aec.gov.au/' + donUrl.replace("amp;","")
-                        html = requests.get(fixedUrl).content
-                        dom = lxml.html.fromstring(html)
-                        h2s = dom.cssselect(".rightColfadWideHold h2")
-                        if donType == "Donor" or donType == "AssociatedEntity":
-                            cleanName = h2s[0].text.strip()
+                        #fixedUrl = 'http://periodicdisclosures.aec.gov.au/' + donUrl.replace("amp;","")
+                        #html = requests.get(fixedUrl).content
+                        #dom = lxml.html.fromstring(html)
+                        #h2s = dom.cssselect(".rightColfadWideHold h2")
+                        #if donType == "Donor" or donType == "AssociatedEntity":
+                            #cleanName = h2s[0].text.strip()
                             #print cleanName.strip()
-                        if donType == "Party":
-                            cleanName = h2s[1].text.strip()
+                        #if donType == "Party":
+                            #cleanName = h2s[1].text.strip()
                             #print cleanName.strip()
 
 
@@ -245,7 +245,7 @@ for x in xrange(upto, len(periods)):
                         data['entityID'] = item.name
                         data['period'] = periods[x]['year']
                         data['entityName'] = item.attrs['label']
-                        data['cleanName'] = cleanName
+                        #data['cleanName'] = cleanName
 
                         # print data
 
