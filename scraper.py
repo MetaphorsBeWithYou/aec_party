@@ -143,7 +143,7 @@ for x in xrange(upto, len(periods)):
                     data = {}
                     data['donType'] = donType
                     data['submissionID'] = submissionID
-                    data['clientID'] = clientID
+                    #data['clientID'] = clientID
                     data['donName'] = donName
                     data['address'] = address
                     data['state'] = state
@@ -163,7 +163,7 @@ for x in xrange(upto, len(periods)):
                     
 
 
-                    scraperwiki.sqlite.save(unique_keys=["rowCount","page","period","entityID"], data=data)
+                    scraperwiki.sqlite.save(unique_keys=["rowCount","page","period"], data=data)
 
 
                 except Exception, e:
@@ -198,7 +198,7 @@ for x in xrange(upto, len(periods)):
                         #print donType
                         submissionID = lxml.html.tostring(tds[0]).split('SubmissionId=')[1].split('&amp;ClientId=')[0]
                         #print submissionID
-                        clientID = lxml.html.tostring(tds[0]).split('ClientId=')[1].split('">')[0]
+                        #clientID = lxml.html.tostring(tds[0]).split('ClientId=')[1].split('">')[0]
                         #print clientID
                         donName = lxml.html.tostring(tds[0]).split('">')[2].split('</a')[0]
                         print donName
@@ -232,7 +232,7 @@ for x in xrange(upto, len(periods)):
                         data = {}
                         data['donType'] = donType
                         data['submissionID'] = submissionID
-                        data['clientID'] = clientID
+                        #data['clientID'] = clientID
                         data['donName'] = donName
                         data['address'] = address
                         data['state'] = state
