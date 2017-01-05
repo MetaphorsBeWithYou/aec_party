@@ -254,8 +254,8 @@ for x in xrange(upto, len(periods)):
                         scraperwiki.sqlite.save(unique_keys=["rowCount","page","period","entityID"], data=data)
 
         except Exception, e:
-            #print e
-            #print traceback.print_exc()
+            print e
+            print traceback.print_exc()
             print "No donations"                
 
     scraperwiki.sqlite.save_var('upto', x)        
