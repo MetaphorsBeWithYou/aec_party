@@ -28,8 +28,8 @@ periods = [
 #{"year":"2011-2012","id":"49"},
 #{"year":"2012-2013","id":"51"},
 #{"year":"2013-2014","id":"55"},
-{"year":"2014-2015","id":"56"}
-#{"year":"2015-2016","id":"xx"}
+#{"year":"2014-2015","id":"56"}
+{"year":"2015-2016","id":"60"}
 ]
 
 #Check if scraper has been run before, see where it got up to
